@@ -1,0 +1,18 @@
+{
+  "packages": ["packages/*"],
+  "version": "1.0.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "graphType": "all"
+    },
+    "version": {
+      "allowBranch": ["master"],
+      "exact": true,
+      "message": "chore(release): release %s",
+      "signGitCommit": true,
+      "signGitTag": true
+    }
+  }
+}

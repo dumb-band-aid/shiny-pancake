@@ -1,0 +1,44 @@
+{
+  "name": "@dumb-band-aid/shiny-pancake",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "description": "All the packages fit to publish",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dumb-band-aid/shiny-pancake.git"
+  },
+  "author": "David Sidlinger <davidsidlinger@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dumb-band-aid/shiny-pancake/issues"
+  },
+  "homepage": "https://github.com/dumb-band-aid/shiny-pancake#readme",
+  "scripts": {
+    "cm": "git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "commitizen": "^4.0.3",
+    "cz-lerna-changelog": "^2.0.2",
+    "husky": "^3.1.0",
+    "lerna": "^3.19.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "semantic-release": "^15.13.31"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
